@@ -303,10 +303,10 @@ setTimeout(() => {window.history.back();}, 450);
 });
 
 $(".reward").click(function() {
-setTimeout(() => {parent.location="https://reward";}, 100);
 setInterval(() => {
 coins = localStorage.getItem("coins"); $(".coins").html(coins);
 }, 1500);
+setTimeout(() => {parent.location="https://reward";}, 100);
 });
 
 inter = localStorage.getItem("inter");
