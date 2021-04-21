@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="res/jquery.min.js"></script>
+    <script>isLoaded = false;</script>
+<style>
+@font-face {
+	font-family: Arial-Rounded;
+	src: url(res/font/Arial_Rounded_Bold.ttf);
+}
+html {
+width: 100vw; height: 100vh; overflow: hidden;
+}
+body {
+width: 100vw; height: 100vh; overflow: hidden;
+margin: 0; font-family: Arial-Rounded;
+user-select: none; /* supported by Chrome and Opera */
+-webkit-user-select: none; /* Safari */
+-khtml-user-select: none; /* Konqueror HTML */
+-moz-user-select: none; /* Firefox */
+-ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+.top {
+width: 90vw; height: 10vh; margin-left: 5vw;
+display: flex; justify-content: space-between; align-items: center;
+}
+.top-ct {
+width: 35vw;
+display: flex; justify-content: space-between; align-items: center;
+transform: scale(1.2); opacity: 0;
+transition: all 350ms ease;
+}
+.back-img {
+width:8vw; height: 8vw;
+}
+.levels {
+font-size: 7vw; color: #efc940; -webkit-text-stroke: 1.3px black;
+}
+.coins-bg {
+width: 20vw; height: 9vw; background-color: #e5e5e5; border-radius: 10px;
+display: flex; justify-content: start; align-items: center;
+transform: scale(1.2); opacity: 0; z-index: 1;
+transition: all 350ms ease;
+}
+.coins-img {
+width: 9vw; height: 9vw;
+}
+.coins {font-size: 5vw;}
+
+.middle {
+width: 100vw; height: 80vh;
+display: flex; flex-wrap: wrap;
+justify-content: center;
+transform: scale(1.2); opacity: 0;
+transition: all 350ms ease;
+}
+.question {
+font-size: 5vw;
+width: 100%; margin: 3vw;
+}
+
+.middle-img {
+width: 40vw; height: 40vw;
+}
+.input-bg {
+width: 100%; display: flex; justify-content: center; align-items: center;
+}
+.input {
+width: 50vw; height: 13vw; font-size: 5vw;
+  background-image: url(res/bg.png);
+  background-size: 100% 100%;
+  outline: none;
+  text-align: center; color: #907d38;
+font-family: Arial-Rounded;
+border: none;
+} .input :focus {
+border: none;
+}
+
+.btn-bg {
+width: 100%; display: flex;
+justify-content: space-around; align-items: center;
+}
+.btn {
+width:60vw; padding: 2vh 0;
+background-color: #89defd; border: solid 1.5vw black;
+border-radius: 40px; font-size: x-large;
+text-align: center;
+}
+
+.bottom {
+width: 100vw; height: 10vh;
+display: flex; justify-content: center; align-items: center;
+transform: scale(1.2); opacity: 0;
+transition: all 350ms ease;
+}
+.hint-img {
+width: 9vh; height: 9vh;
+}
+
+.active:active {
+transition: none; opacity: .5;
+}
+</style>
+</head>
+<body>
+ <div class="top">
+     <div class="top-ct">
+        <img src="res/back.png" class="back-img active">
+        <div class="levels">No. <span id="levels">12</span></div>
+     </div>
+    
+    <div class="coins-bg">
+         <img src="res/coins.png" class="coins-img">
+        <div class="coins">3</div>
+    </div>
+</div>
+
+<div class="middle">
+<div class="question"></div>
+<div class="input-bg">
+    <input class="input" id="input" type="text" placeholder="Enter"/>
+</div>
+<img src="" class="middle-img">
+<div class="btn-bg">
+    <div class="btn active">OK</div>
+</div>
+
+</div>
+
+<div class="bottom">
+<img src="res/coins.png" class="hint-img active">
+</div>
+
+<style>
+.answer-con {
+width: 100vw; height: 100vh;
+position: fixed; top: 0; left: 0;
+background-color: white; 
+display: none; justify-content: center; align-items: center;
+animation: con-anim 400ms linear 1;
+
+} @keyframes con-anim {
+    0% {transform: scale(1.2); opacity: 0;}
+    100% {transform: scale(1); opacity: 1;}
+}
+.answer-ct {
+width: 80vw; height: 65vw;
+background-color: white; border: solid 1.5vw black;
+border-radius: 10px; display: flex; flex-wrap: wrap;
+justify-content: center; align-items: center;
+transition: all 350ms ease;
+}
+.ct-title-bg {
+width: 40vw; display: flex; flex-wrap: wrap;
+justify-content: center;
+}
+.ct-title {
+text-align: center; transform: translateY(2.9vw);
+font-size: 7vw;
+}
+.ct-title-btm {
+width: 39vw; height: 3vw; background-color: #efc940; border-radius: 10px;
+}
+.ans {
+width: 100%; height: 20vw;
+text-align: center; display: flex; font-size: x-large;
+justify-content: center; align-items: center;
+}
+
+.btn2, .btn3 {
+width:32vw; padding: .5vh 0;
+background-color: #89defd; border: solid 1.5vw black;
+border-radius: 40px; font-size: x-large;
+display: flex; justify-content: center; align-items: center;
+}
+.btn3 {background-color: #8cd876;}
+.nav-img {
+width: 10vw; height: 10vw;
+transform: rotate(180deg);}
+
+.wrong-bg {
+width: 40vw; height: 30vw; background-color: white; border: solid 1vw black;
+position: fixed; top: 40%; left: 30vw; border-radius: 10px;
+display: none; justify-content: center; align-items: center;
+}
+.wrong-img {
+width: 20vw; height: 20vw;
+}
+</style>
+<div class="answer-con">
+    <div class="answer-ct">
+        <div class="ct-title-bg">
+            <div class="ct-title">Completed</div>
+            <div class="ct-title-btm"></div>
+        </div>
+        <div class="ans">Apple</div>
+        <div class="btn-bg">
+            <div class="btn3 reward active"><img src="res/coins.png" class="coins-img"> + 1</div>
+            <div class="btn2 next active"><img src="res/nav1.png" class="nav-img nav-img2"></div>
+        </div>
+    </div>
+</div>
+<div class="wrong-bg">
+    <img src="res/wrong.png" class="wrong-img">
+</div>
+<script src="res/variables/quiz.js"></script>
+<script>
+setTimeout(() => {$(".coins-bg").css({transform:'scale(1)', opacity:'1'});}, 100);
+setTimeout(() => {$(".top-ct").css({transform:'scale(1)', opacity:'1'});}, 200);
+setTimeout(() => {$(".middle").css({transform:'scale(1)', opacity:'1'});}, 300);
+setTimeout(() => {$(".bottom").css({transform:'scale(1)', opacity:'1'});}, 400);
+
+function Outro() {
+setTimeout(() => {$(".coins-bg").css({transform:'scale(1.2)', opacity:'0'});}, 100);
+setTimeout(() => {$(".top-ct").css({transform:'scale(1.2)', opacity:'0'});}, 200);
+setTimeout(() => {$(".middle").css({transform:'scale(1.2)', opacity:'0'});}, 300);
+setTimeout(() => {$(".bottom").css({transform:'scale(1.2)', opacity:'0'});}, 400);
+}
+
+coins = localStorage.getItem("coins"); $(".coins").html(coins);
+quizLevel = localStorage.getItem("quizLevel"); $("#levels").html(quizLevel);
+
+function appendAll() {
+$(".question").html(window["q_" + quizLevel]);
+if (window["img_t_" + quizLevel] == 0) {
+x = Math.floor(Math.random() * 2 + 1);
+$(".middle-img").attr("src","res/think" + x + ".svg");
+} else {
+$(".middle-img").attr("src","quiz/" + quizLevel + window["t_" + quizLevel]);
+}
+$(".middle-img").error(function() {
+$(".middle-img").css({visibility:'hidden'});
+});
+$(".ans").html(window["ans_" + quizLevel]);
+}
+
+function loadCheck() {
+if (isLoaded) {
+    appendAll();
+} else {
+setTimeout(() => {loadCheck();}, 1000);
+}
+}
+loadCheck();
+
+btnClickBool = false;
+function btnClick() {
+$(".input").blur();
+if (!btnClickBool) {
+inputAns = document.getElementById("input").value.toLowerCase().replace(/<|>/g, "");
+if (inputAns == window["ans_" + quizLevel]) {
+    quizLevel ++; localStorage.setItem("quizLevel", quizLevel);
+    $(".answer-con").css({display:'flex'});
+    btnClickBool = true;
+} else {
+    btnClickBool = false;
+    $(".wrong-bg").css({display:'flex'});
+    setTimeout(() => {$(".wrong-bg").fadeOut();}, 300);
+}
+}
+}
+
+$(".btn").click(function() {
+btnClick();
+});
+
+$(".hint-img").click(function () {
+if (coins >= 1) {
+coins --; localStorage.setItem("coins", coins); $(".coins").html(coins);
+quizLevel ++; localStorage.setItem("quizLevel", quizLevel);
+setTimeout(() => {$(".answer-con").css({display:'flex'});}, 200);
+} else {
+Outro();
+setTimeout(() => {parent.location="get_hints.html";}, 450);
+}
+});
+
+var input = document.getElementById("input");
+input.addEventListener("keyup", function(event) {
+// Number 13 is the "Enter" key on the keyboard
+if (event.keyCode === 13) {btnClick();}
+});
+
+$(".next").click(function () {
+setTimeout(() => {$(".answer-ct").css({transform:'scale(1.2)', opacity:'0'});}, 200);
+setTimeout(() => {$(".coins-bg").css({transform:'scale(1.2)', opacity:'0'});}, 300);
+
+if (quizLevel <= q_total) {
+setTimeout(() => {location.reload();}, 650);
+} else {
+setTimeout(() => {window.history.back();}, 650);
+}
+});
+
+$(".back-img").click(function() {
+Outro();
+setTimeout(() => {window.history.back();}, 450);
+});
+
+$(".reward").click(function() {
+setTimeout(() => {parent.location="https://reward";}, 100);
+setInterval(() => {
+coins = localStorage.getItem("coins"); $(".coins").html(coins);
+}, 1500);
+});
+
+inter = localStorage.getItem("inter");
+interIncrease = true;
+$(".btn, .btn2, .back-img, .hint-img").click(function() {
+if (interIncrease) {
+interIncrease = false;
+inter ++; localStorage.setItem("inter", inter);   
+setTimeout(() => {interIncrease = true;}, 3000);
+}
+if (inter == 7) {
+inter = 0; localStorage.setItem("inter", 0);
+parent.location="https://inter";
+}
+});
+</script>
+</body>
+</html>

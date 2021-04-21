@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 52.916665 26.458334"
+   height="100"
+   width="200">
+  <defs
+     id="defs2">
+    <rect
+       id="rect952"
+       height="25.607887"
+       width="32.127976"
+       y="1.889881"
+       x="33.261905" />
+    <rect
+       id="rect946"
+       height="20.127232"
+       width="21.450149"
+       y="3.0238095"
+       x="23.718006" />
+  </defs>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1">
+    <text
+       transform="matrix(1.067785,0,0,1.067785,-8.0481742,1.7284676)"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';white-space:pre;shape-inside:url(#rect946);fill:#000000;fill-opacity:1;stroke:none;"
+       id="text944"
+       xml:space="preserve"><tspan
+         x="23.71875"
+         y="12.678903"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold'">+</tspan></tspan></text>
+    <g
+       transform="matrix(0.03132081,0,0,0.03132081,-0.73610265,4.2711299)"
+       id="g1060">
+      <path
+         style="fill:#b2edff"
+         d="M 256.452,512 C 338.072,511.758 405.261,443.554 404.641,361.931 403.776,247.941 298.85,126.992 263.324,5.509 262.248,1.829 259.124,-0.005 256.001,0 252.877,-0.005 249.753,1.829 248.677,5.509 213.152,126.992 108.225,247.941 107.36,361.931 106.74,443.554 173.929,511.758 255.549,512"
+         id="path999" />
+      <path
+         style="fill:#e8faff"
+         d="m 305.561,471.001 c -4.472,0 -8.786,-2.427 -10.996,-6.661 -3.161,-6.065 -0.806,-13.548 5.258,-16.71 24.548,-12.798 42.266,-35.524 48.605,-62.347 1.577,-6.661 8.222,-10.79 14.907,-9.21 6.657,1.573 10.778,8.25 9.206,14.903 -8,33.839 -30.331,62.5 -61.266,78.621 -1.831,0.952 -3.787,1.404 -5.714,1.404 z"
+         id="path1001" />
+      <path
+         style="fill:#59d8ff"
+         d="m 305.999,495.485 h -0.903 C 223.476,495.227 156.287,422.622 156.907,335.734 157.55,245.547 215.668,151.266 260.059,55.702 267.335,40.039 268.255,22.329 263.395,5.757 263.371,5.674 263.347,5.592 263.323,5.509 262.247,1.829 259.123,-0.005 256,0 252.876,-0.006 249.753,1.829 248.676,5.509 210.846,134.874 94.316,263.635 108.554,384.031 117.251,457.577 181.491,512 255.549,512 h 0.902 c 25.433,-0.076 49.46,-6.759 70.476,-18.382 -6.86,1.084 -13.812,1.844 -20.928,1.867 z"
+         id="path1003" />
+      <g
+         id="g1005">
+</g>
+      <g
+         id="g1007">
+</g>
+      <g
+         id="g1009">
+</g>
+      <g
+         id="g1011">
+</g>
+      <g
+         id="g1013">
+</g>
+      <g
+         id="g1015">
+</g>
+      <g
+         id="g1017">
+</g>
+      <g
+         id="g1019">
+</g>
+      <g
+         id="g1021">
+</g>
+      <g
+         id="g1023">
+</g>
+      <g
+         id="g1025">
+</g>
+      <g
+         id="g1027">
+</g>
+      <g
+         id="g1029">
+</g>
+      <g
+         id="g1031">
+</g>
+      <g
+         id="g1033">
+</g>
+    </g>
+    <g
+       transform="matrix(0.04504435,0,0,0.04504435,30.043085,3.1086045)"
+       id="g1206">
+      <g
+         id="g1141">
+	<polygon
+   style="fill:#d9ac80"
+   points="299.2,204.8 374,160.8 448.8,204.8 374,248.4 299.2,292.4 224.4,248.4 "
+   id="polygon1121" />
+
+	<polygon
+   style="fill:#a67e4f"
+   points="372,333.6 372,249.6 299.2,292.4 224.4,248.4 223.6,248 223.6,419.6 "
+   id="polygon1123" />
+
+	<polygon
+   style="fill:#d9ac80"
+   points="149.6,204.8 74.8,160.8 0,204.8 74.8,248.4 149.6,292.4 224.4,248.4 "
+   id="polygon1125" />
+
+	<polygon
+   style="fill:#643513"
+   points="74.8,160.8 149.6,116.8 224.4,72.8 299.2,116.8 374,160.8 299.2,204.8 224.4,248.4 149.6,204.8 "
+   id="polygon1127" />
+
+	<g
+   id="g1133">
+		<polygon
+   style="fill:#d9ac80"
+   points="149.6,116.8 74.8,160.8 0,116.8 74.8,72.8 149.6,29.2 224.4,72.8 "
+   id="polygon1129" />
+
+		<polygon
+   style="fill:#d9ac80"
+   points="299.2,116.8 374,160.8 448.8,116.8 374,72.8 299.2,29.2 224.4,72.8 "
+   id="polygon1131" />
+
+	</g>
+
+	<polygon
+   style="fill:#926e43"
+   points="149.6,292.4 223.6,249.2 223.6,419.6 74.8,333.6 74.8,248.4 "
+   id="polygon1135" />
+
+	<polygon
+   style="fill:#8d5122"
+   points="149.6,204.8 173.6,218.8 224.4,189.2 224.4,72.8 149.6,116.8 74.8,160.8 "
+   id="polygon1137" />
+
+	<polygon
+   style="fill:#77411b"
+   points="275.2,218.8 299.2,204.8 374,160.8 299.2,116.8 224.4,72.8 224.4,189.2 "
+   id="polygon1139" />
+
+</g>
+      <g
+         id="g1143">
+</g>
+      <g
+         id="g1145">
+</g>
+      <g
+         id="g1147">
+</g>
+      <g
+         id="g1149">
+</g>
+      <g
+         id="g1151">
+</g>
+      <g
+         id="g1153">
+</g>
+      <g
+         id="g1155">
+</g>
+      <g
+         id="g1157">
+</g>
+      <g
+         id="g1159">
+</g>
+      <g
+         id="g1161">
+</g>
+      <g
+         id="g1163">
+</g>
+      <g
+         id="g1165">
+</g>
+      <g
+         id="g1167">
+</g>
+      <g
+         id="g1169">
+</g>
+      <g
+         id="g1171">
+</g>
+    </g>
+  </g>
+</svg>

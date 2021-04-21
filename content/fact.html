@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="res/jquery.min.js"></script>
+    <script>isLoaded = false;</script>
+<style>
+@font-face {
+	font-family: SansSerif;
+	src: url(res/font/SansSerifBold.ttf);
+}
+html {
+width: 100vw; height: 100vh; overflow: hidden;
+}
+body {
+width: 100vw; height: 100vh; overflow: hidden;
+margin: 0; font-family: SansSerif;
+user-select: none; /* supported by Chrome and Opera */
+-webkit-user-select: none; /* Safari */
+-khtml-user-select: none; /* Konqueror HTML */
+-moz-user-select: none; /* Firefox */
+-ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+.top {
+width: 90vw; height: 10vh; margin-left: 5vw;
+display: flex; justify-content: space-between; align-items: center;
+}
+.top-ct {
+width: 35vw;
+display: flex; justify-content: space-between; align-items: center;
+transform: scale(1.2); opacity: 0;
+transition: all 350ms ease;
+}
+.back-img {
+width:8vw; height: 8vw;
+}
+.levels {
+font-size: 7vw; color: #efc940; -webkit-text-stroke: 1.3px black;
+}
+
+.coins-bg {
+width: 20vw; height: 9vw; background-color: #e5e5e5; border-radius: 10px;
+display: flex; justify-content: start; align-items: center;
+transform: scale(1.2); opacity: 0;
+transition: all 350ms ease;
+}
+.coins-img {
+width: 9vw; height: 9vw;
+}
+.coins {font-size: 5vw;}
+
+.middle {
+width: 100vw; height: 70vh;
+display: flex; flex-wrap: wrap;
+justify-content: center;
+transform: scale(1.2); opacity: 0;
+transition: all 350ms ease;
+}
+.question {
+font-size: 5vw;
+width: 100%; margin: 3vw;
+} .question :active {
+    background-color: green;
+}
+.middle-img {
+width: 40vw; height: 40vw;
+}
+.input-bg {
+width: 100%; display: flex; justify-content: center; align-items: center;
+}
+.input {
+width: 50vw; height: 13vw; font-size: 5vw;
+  background-image: url(res/bg.png);
+  background-size: 100% 100%;
+  outline: none; 
+  text-align: center; color: #907d38;
+font-family: SansSerif;
+border: none;
+} .input :focus {
+border: none;
+}
+
+.bottom {
+width: 100vw; height: 20vh;
+display: flex; justify-content: space-evenly; align-items: center;
+transform: scale(1.2); opacity: 0;
+transition: all 350ms ease;
+}
+.btn {
+width:35vw; padding: 1.5vh 0;
+background-color: #89defd; border: solid 1.5vw black;
+border-radius: 40px; font-size: x-large;
+display: flex; justify-content: center; align-items: center;
+}
+.nav-img {
+width: 10vw; height: 10vw;
+} .nav-img2 {transform: rotate(180deg);}
+
+.active:active {
+transition: none; opacity: .5;
+}
+
+.toast {
+width: 90vw; padding: 1vh 0; display: none;
+position: fixed; top: 80%; text-align: center; border-radius: 10px;
+margin-left: 5vw; background-color: white; border: solid 1vw black;
+transition:all 300ms linear;
+animation: toast 300ms linear 1;
+} @keyframes toast {
+    0% {transform: scale(1.2); opacity: 0;}
+    100% {transform: scale(1); opacity: 1;}
+}
+</style>
+</head>
+<body>
+ <div class="top">
+    <div class="top-ct">
+        <img src="res/back.png" class="back-img active">
+        <div class="levels">No. <span id="levels">12</span></div>
+     </div>
+    <div class="coins-bg">
+         <img src="res/coins.png" class="coins-img">
+        <div class="coins">3</div>
+    </div>
+</div>
+
+<div class="middle">
+<div class="question">
+    1.World's longest French fry is 34 inches long
+</div>
+<img src="" class="middle-img">
+
+</div>
+
+<div class="bottom">
+<div class="btn prev active"><img src="res/nav1.png" class="nav-img"></div>
+<div class="btn next active"><img src="res/nav1.png" class="nav-img nav-img2"></div>
+</div>
+<div class="toast"></div>
+<script src="res/variables/fact.js"></script>
+<script>
+setTimeout(() => {$(".coins-bg").css({transform:'scale(1)', opacity:'1'});}, 100);
+setTimeout(() => {$(".top-ct").css({transform:'scale(1)', opacity:'1'});}, 200);
+setTimeout(() => {$(".middle").css({transform:'scale(1)', opacity:'1'});}, 300);
+setTimeout(() => {$(".bottom").css({transform:'scale(1)', opacity:'1'});}, 400);
+
+function Outro() {
+setTimeout(() => {$(".coins-bg").css({transform:'scale(1.2)', opacity:'0'});}, 100);
+setTimeout(() => {$(".top-ct").css({transform:'scale(1.2)', opacity:'0'});}, 200);
+setTimeout(() => {$(".middle").css({transform:'scale(1.2)', opacity:'0'});}, 300);
+setTimeout(() => {$(".bottom").css({transform:'scale(1.2)', opacity:'0'});}, 400);
+}
+
+coins = localStorage.getItem("coins"); $(".coins").html(coins);
+factLevel = localStorage.getItem("factLevel"); $("#levels").html(factLevel);
+
+
+function appendAll() {
+$(".question").html(window["q_" + factLevel]);
+$(".middle-img").attr("src","fact/" + factLevel + window["t_" + factLevel]);
+$(".middle-img").error(function() {
+$(".middle-img").css({visibility:'hidden'});
+});
+}
+
+function loadCheck() {
+if (isLoaded) {
+    appendAll();
+} else {
+setTimeout(() => {loadCheck();}, 1000);
+}
+}
+loadCheck();
+
+function showToast() {
+setTimeout(() => {$(".toast").fadeIn(0);}, 100);
+setTimeout(() => {$(".toast").fadeOut();}, 2000);
+}
+
+$(".next").click(function() {
+if (factLevel < f_total) {
+$(".middle-img").css({visibility:'visible'});
+factLevel ++; localStorage.setItem("factLevel", factLevel);
+$("#levels").html(factLevel);
+appendAll();
+} else {
+$(".toast").html("More coming soon...");
+showToast();
+}
+});
+
+$(".prev").click(function() {
+if (factLevel > 1) {
+$(".middle-img").css({visibility:'visible'});
+factLevel --; localStorage.setItem("factLevel", factLevel);
+$("#levels").html(factLevel);
+appendAll();
+} else {
+$(".toast").html("This is the first fact");
+showToast();
+}
+});
+
+$(".back-img").click(function() {
+Outro();
+setTimeout(() => {window.history.back();}, 450);
+});
+
+inter = localStorage.getItem("inter");
+interIncrease = true;
+$(".btn, .btn2, .back-img, .hint-img").click(function() {
+if (interIncrease) {
+interIncrease = false;
+inter ++; localStorage.setItem("inter", inter);   
+setTimeout(() => {interIncrease = true;}, 3000);
+}
+if (inter == 7) {
+inter = 0; localStorage.setItem("inter", 0);
+parent.location="https://inter";
+}
+});
+</script>
+</body>
+</html>

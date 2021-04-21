@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="res/jquery.min.js"></script>
+    <script>isLoaded = false;</script>
+<style>
+@font-face {
+	font-family: SansSerif;
+	src: url(res/font/SansSerifBold.ttf);
+}
+html {
+width: 100vw; height: 100vh; overflow: hidden;
+}
+body {
+width: 100vw; height: 100vh; overflow: hidden;
+margin: 0; font-family: SansSerif;
+user-select: none; /* supported by Chrome and Opera */
+-webkit-user-select: none; /* Safari */
+-khtml-user-select: none; /* Konqueror HTML */
+-moz-user-select: none; /* Firefox */
+-ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+.top {
+width: 90vw; height: 10vh; margin-left: 5vw;
+display: flex; justify-content: space-between; align-items: center;
+}
+.back-img {
+width:8vw; height: 8vw;
+transform: scale(1.2); opacity: 0;
+transition: all 350ms ease;
+}
+.coins-bg {
+width: 20vw; height: 9vw; background-color: #e5e5e5; border-radius: 10px;
+display: flex; justify-content: start; align-items: center;
+transform: scale(1.2); opacity: 0; z-index: 1;
+transition: all 350ms ease;
+}
+.coins-img {
+width: 9vw; height: 9vw;
+}
+.coins {font-size: 5vw;}
+
+.bottom {
+width: 100vw; height: 90vh;
+display: flex; flex-wrap: wrap;
+justify-content: center; align-items: center;
+transform: scale(1.2); opacity: 0;
+transition: all 350ms ease;
+}
+
+.active:active {
+transition: none; opacity: .5;
+}
+</style>
+</head>
+<body>
+ <div class="top">
+    <img src="res/back.png" class="back-img active">
+    <div class="coins-bg">
+         <img src="res/coins.png" class="coins-img">
+        <div class="coins">0</div>
+    </div>
+</div>
+<style>
+.ct {
+width: 90vw; height: 15vw;
+border: solid 1vw black; border-radius: 10px;
+display: flex; justify-content: space-between; align-items: center;
+}
+.ct-sub-bg {
+width: 29vw;
+display: flex; justify-content: center; align-items: center;
+font-size: 6vw;
+}
+.hint-img {
+width: 12vw; height: 12vw;
+}
+.buy {
+width: 20vw; height: 11vw;
+transform: translateX(-4.7vw);
+background-color: #e5e5e5;
+display: flex; justify-content: space-evenly; align-items: center;
+border-radius: 10px;
+}
+.video-img {
+width: 6vw; height: 6vw;
+}
+</style>
+<div class="bottom">
+<div class="ct ct1">
+    <div class="ct-sub-bg">
+        <img src="res/coins.png" class="hint-img"> + 1
+    </div>
+    <div class="buy free active"><img src="res/video.png" class="video-img"> Free</div>
+</div>
+
+<div class="ct ct2">
+    <div class="ct-sub-bg">
+        <img src="res/coins.png" class="hint-img"> + 5
+    </div>
+    <div class="buy buy1 active">Buy</div>
+</div>
+
+<div class="ct ct3">
+    <div class="ct-sub-bg">
+        <img src="res/coins.png" class="hint-img"> + 10
+    </div>
+    <div class="buy buy2 active">Buy</div>
+</div>
+
+<div class="ct ct4">
+    <div class="ct-sub-bg">
+        <img src="res/coins.png" class="hint-img"> + 20
+    </div>
+    <div class="buy buy3 active">Buy</div>
+</div>
+
+</div>
+
+<script>
+setTimeout(() => {$(".coins-bg").css({transform:'scale(1)', opacity:'1'});}, 100);
+setTimeout(() => {$(".back-img").css({transform:'scale(1)', opacity:'1'});}, 200);
+setTimeout(() => {$(".bottom").css({transform:'scale(1)', opacity:'1'});}, 400);
+
+function Outro() {
+setTimeout(() => {$(".bottom").css({transform:'scale(1.2)', opacity:'0'});}, 100);
+setTimeout(() => {$(".coins-bg").css({transform:'scale(1.2)', opacity:'0'});}, 200);
+setTimeout(() => {$(".back-img").css({transform:'scale(1.2)', opacity:'0'});}, 300);
+
+}
+
+coins = localStorage.getItem("coins"); $(".coins").html(coins);
+
+
+$(".back-img").click(function() {
+Outro();
+setTimeout(() => {window.history.back();}, 450);
+});
+
+$(".free").click(function() {
+setTimeout(() => {parent.location="https://reward";}, 350);
+});
+$(".buy1").click(function() {
+setTimeout(() => {parent.location="https://item1";}, 350);
+});
+$(".buy2").click(function() {
+setTimeout(() => {parent.location="https://item2";}, 350);
+});
+$(".buy3").click(function() {
+setTimeout(() => {parent.location="https://item3";}, 350);
+});
+$(".buy4").click(function() {
+setTimeout(() => {parent.location="https://item4";}, 350);
+});
+
+setInterval(() => {
+coins = localStorage.getItem("coins"); $(".coins").html(coins);
+}, 1500);
+</script>
+</body>
+</html>

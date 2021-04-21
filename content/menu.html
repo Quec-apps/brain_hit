@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="res/jquery.min.js"></script>
+</head>
+<style>
+@font-face {
+	font-family: ArialRounded;
+	src: url(res/font/Arial_Rounded_Bold.ttf);
+}
+@font-face {
+	font-family: the_unseen;
+	src: url(res/font/the_unseen.ttf);
+}
+html {
+width: 100vw; height: 100vh; overflow: hidden;
+}
+body {
+width: 100vw; height: 100vh; overflow: hidden;
+margin: 0; font-family: ArialRounded;
+user-select: none; /* supported by Chrome and Opera */
+-webkit-user-select: none; /* Safari */
+-khtml-user-select: none; /* Konqueror HTML */
+-moz-user-select: none; /* Firefox */
+-ms-user-select: none; /* Internet Explorer/Edge */
+}
+
+.top {
+width: 90vw; height: 10vh; margin-left: 5vw;
+display: flex; justify-content: space-between; align-items: center;
+}
+.title {
+font-size: 10vw; transform: scale(1.2); opacity: 0;
+transition: all 350ms ease; font-family: the_unseen;
+}
+.coins-bg {
+width: 20vw; height: 9vw; background-color: #e5e5e5; border-radius: 10px;
+display: flex; justify-content: start; align-items: center;
+transform: scale(1.2); opacity: 0;
+transition: all 350ms ease;
+}
+.coins-img {
+width: 9vw; height: 9vw;
+}
+.coins {font-size: 5vw;}
+
+.middle {
+width: 100vw; height: 90vh;
+display: flex; flex-wrap: wrap; justify-content: space-evenly; align-items: center;
+}
+.middle-ct {
+width: 42vw; height: 62vw;
+border: solid 2vw black; border-radius: 10px; 
+transform: scale(1.2); opacity: 0;
+transition: all 350ms ease;
+} .middle-ct :active {
+transition: none;
+opacity: .5;
+}
+.middle-img {
+width: 100%; 
+}
+.ct-btm {
+width: 100%; font-size: 8vw;
+display: flex; flex-wrap: wrap; justify-content: center; align-items: center;
+}
+.ct-title-bg {
+width: 100%; display: flex; flex-wrap: wrap;
+justify-content: center;
+}
+.ct-title {
+text-align: center; transform: translateY(3.5vw);
+}
+.ct-title-btm {
+width: 27vw; height: 3vw; background-color: #efc940; border-radius: 10px;
+}
+.level-bg {
+font-size: 4.5vw;
+}
+.toast {
+width: 90vw; padding: 1vh 0; display: none;
+position: fixed; top: 80%; text-align: center; border-radius: 10px;
+margin-left: 5vw; background-color: white; border: solid 1vw black;
+transition:all 300ms linear;
+animation: toast 300ms linear 1;
+} @keyframes toast {
+    0% {transform: scale(1.2); opacity: 0;}
+    100% {transform: scale(1); opacity: 1;}
+}
+</style>
+<body>
+    <div class="top">
+        <div class="title">Brain Hit</div>
+        <div class="coins-bg">
+            <img src="res/coins.png" class="coins-img">
+            <div class="coins">3</div>
+        </div>
+    </div>
+<div class="middle">
+<div class="middle-ct ct1">
+<img src="res/quiz.png" class="middle-img">
+<div class="ct-btm">
+<div class="ct-title-bg">
+    <div class="ct-title">Quiz</div>
+    <div class="ct-title-btm"></div>
+</div>
+<div class="level-bg"><span id="quizLevel">0</span> / <span id="q_total">0</span> </div>
+</div>
+</div>
+<div class="middle-ct ct2"style="display:none;"> 
+<img src="res/fact.png" class="middle-img">
+<div class="ct-btm">
+<div class="ct-title-bg">
+    <div class="ct-title">Fact</div>
+    <div class="ct-title-btm"></div>
+</div>
+<div class="level-bg"><span id="factLevel">0</span> / <span id="f_total">0</span></div>
+</div>
+</div>
+
+<div class="middle-ct ct3">
+    <img src="res/guess.png" class="middle-img">
+    <div class="ct-btm">
+    <div class="ct-title-bg">
+        <div class="ct-title">Guess</div>
+        <div class="ct-title-btm"></div>
+    </div>
+    <div class="level-bg"><span id="guessLevel">0</span> / <span id="g_total">0</span></div>
+    </div>
+    </div>
+
+</div>
+<div class="toast">More coming soon...</div>
+<script src="res/variables/quiz.js"></script>
+<script src="res/variables/fact.js"></script>
+<script src="res/variables/guess.js"></script>
+<script>
+setTimeout(() => {$(".coins-bg").css({transform:'scale(1)', opacity:'1'});}, 100);
+setTimeout(() => {$(".title").css({transform:'scale(1)', opacity:'1'});}, 200);
+setTimeout(() => {$(".ct1").css({transform:'scale(1)', opacity:'1'});}, 300);
+setTimeout(() => {$(".ct2").css({transform:'scale(1)', opacity:'1'});}, 500);
+setTimeout(() => {$(".ct3").css({transform:'scale(1)', opacity:'1'});}, 600);
+
+function Outro() {
+setTimeout(() => {$(".coins-bg").css({transform:'scale(1.2)', opacity:'0'});}, 100);
+setTimeout(() => {$(".title").css({transform:'scale(1.2)', opacity:'0'});}, 200);
+setTimeout(() => {$(".ct2").css({transform:'scale(1.2)', opacity:'0'});}, 300);
+setTimeout(() => {$(".ct1").css({transform:'scale(1.2)', opacity:'0'});}, 500);
+setTimeout(() => {$(".ct3").css({transform:'scale(1.2)', opacity:'0'});}, 600);
+}
+
+if (localStorage.getItem("coins") == null) {
+    localStorage.setItem("coins", 5);
+    localStorage.setItem("quizLevel", 1); localStorage.setItem("factLevel", 1); localStorage.setItem("guessLevel", 1);
+}
+
+coins = localStorage.getItem("coins");
+quizLevel = localStorage.getItem("quizLevel");
+factLevel = localStorage.getItem("factLevel");
+guessLevel = localStorage.getItem("guessLevel");
+$(".coins").html(coins);
+$("#quizLevel").html(quizLevel); $("#q_total").html(q_total);
+$("#factLevel").html(factLevel); $("#f_total").html(f_total);
+$("#guessLevel").html(guessLevel); $("#g_total").html(g_total);
+
+function showToast() {
+setTimeout(() => {$(".toast").fadeIn(0);}, 100);
+setTimeout(() => {$(".toast").fadeOut();}, 2000);
+}
+
+
+$(".ct1").click(function() {
+if (quizLevel > q_total) {
+showToast();
+} else {
+    Outro();
+    setTimeout(() => {parent.location="quiz.html";}, 770);
+}
+});
+$(".ct2").click(function() {
+if (factLevel > f_total) {
+showToast();
+} else {
+    Outro();
+    setTimeout(() => {parent.location="fact.html";}, 770);
+}
+});
+$(".ct3").click(function() {
+if (guessLevel > g_total) {
+showToast();
+} else {
+    Outro();
+    setTimeout(() => {parent.location="guess.html";}, 770);
+}
+});
+
+$(".coins-bg").click(function() {
+Outro();
+setTimeout(() => {parent.location="get_hints.html";}, 450);
+});
+</script>
+</body>
+</html>

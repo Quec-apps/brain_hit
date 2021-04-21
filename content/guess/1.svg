@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   id="svg8"
+   version="1.1"
+   viewBox="0 0 52.916665 26.458334"
+   height="100"
+   width="200">
+  <defs
+     id="defs2">
+    <rect
+       id="rect952"
+       height="25.607887"
+       width="32.127976"
+       y="1.889881"
+       x="33.261905" />
+    <rect
+       id="rect946"
+       height="20.127232"
+       width="21.450149"
+       y="3.0238095"
+       x="23.718006" />
+  </defs>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1">
+    <g
+       transform="matrix(0.02799424,0,0,0.02799424,1.8321041,6.7594936)"
+       id="g942">
+      <path
+         style="fill:#8dc640"
+         d="m 405.493,412.764 c -69.689,56.889 -287.289,56.889 -355.556,0 -69.689,-56.889 -62.578,-300.089 0,-364.089 62.578,-64 292.978,-64 355.556,0 62.578,64 69.689,307.201 0,364.089 z"
+         id="path878" />
+      <g
+         style="opacity:0.2"
+         id="g882">
+	<path
+   style="fill:#ffffff"
+   d="M 229.138,313.209 C 166.56,362.987 96.871,388.587 31.449,390.009 -16.907,307.52 -6.951,106.987 49.938,48.676 c 51.2,-52.622 211.911,-62.578 304.356,-29.867 22.755,93.867 -24.178,213.333 -125.156,294.4 z"
+   id="path880" />
+
+</g>
+      <path
+         style="fill:#ffffff"
+         d="m 195.004,354.453 c -9.956,0 -19.911,-4.267 -25.6,-12.8 L 89.76,239.253 c -11.378,-14.222 -8.533,-34.133 5.689,-45.511 14.222,-11.378 34.133,-8.533 45.511,5.689 l 54.044,69.689 119.467,-155.022 c 11.378,-14.222 31.289,-17.067 45.511,-5.689 14.222,11.378 17.067,31.289 5.689,45.511 L 220.604,341.653 c -7.111,7.111 -15.644,12.8 -25.6,12.8 z"
+         id="path884" />
+      <g
+         id="g886">
+</g>
+      <g
+         id="g888">
+</g>
+      <g
+         id="g890">
+</g>
+      <g
+         id="g892">
+</g>
+      <g
+         id="g894">
+</g>
+      <g
+         id="g896">
+</g>
+      <g
+         id="g898">
+</g>
+      <g
+         id="g900">
+</g>
+      <g
+         id="g902">
+</g>
+      <g
+         id="g904">
+</g>
+      <g
+         id="g906">
+</g>
+      <g
+         id="g908">
+</g>
+      <g
+         id="g910">
+</g>
+      <g
+         id="g912">
+</g>
+      <g
+         id="g914">
+</g>
+    </g>
+    <text
+       transform="translate(-6.9925595,3.5907738)"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';white-space:pre;shape-inside:url(#rect946);fill:#000000;fill-opacity:1;stroke:none;"
+       id="text944"
+       xml:space="preserve"><tspan
+         x="23.71875"
+         y="12.678903"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold'">+</tspan></tspan></text>
+    <text
+       transform="translate(-6.1421132,5.1026786)"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';white-space:pre;shape-inside:url(#rect952);fill:#000000;fill-opacity:1;stroke:none;"
+       id="text950"
+       xml:space="preserve"><tspan
+         x="33.261719"
+         y="11.54609"><tspan
+           style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold'">TOK</tspan></tspan></text>
+  </g>
+</svg>

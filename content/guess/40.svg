@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   width="500"
+   height="250"
+   viewBox="0 0 132.29166 66.145835"
+   version="1.1"
+   id="svg8">
+  <defs
+     id="defs2">
+    <rect
+       id="rect3591"
+       height="32.246093"
+       width="36.586914"
+       y="17.569987"
+       x="2.6871745" />
+    <rect
+       x="33.261906"
+       y="1.889881"
+       width="32.127975"
+       height="25.607887"
+       id="rect952" />
+    <rect
+       x="23.718006"
+       y="3.0238094"
+       width="21.45015"
+       height="20.127232"
+       id="rect946" />
+    <rect
+       id="rect952-5"
+       height="25.607887"
+       width="32.127975"
+       y="1.889881"
+       x="33.261906" />
+    <rect
+       id="rect1246"
+       height="25.607887"
+       width="32.127975"
+       y="1.889881"
+       x="33.261906" />
+    <rect
+       id="rect2592"
+       height="20.127232"
+       width="21.45015"
+       y="3.0238094"
+       x="23.718006" />
+    <rect
+       x="23.718006"
+       y="3.0238094"
+       width="21.45015"
+       height="20.127232"
+       id="rect2600" />
+    <rect
+       id="rect2608"
+       height="20.127232"
+       width="21.45015"
+       y="3.0238094"
+       x="23.718006" />
+    <rect
+       x="2.6871746"
+       y="17.569986"
+       width="36.586914"
+       height="32.246094"
+       id="rect3591-5" />
+    <rect
+       x="2.6871746"
+       y="17.569986"
+       width="36.586914"
+       height="32.246094"
+       id="rect4205" />
+  </defs>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="g3849"
+     transform="matrix(0.6429676,0,0,0.6429676,28.09158,65.930688)">
+    <path
+       id="path3845"
+       d="m 60.616729,-60.990905 v 18.708867"
+       style="fill:none;stroke:#000000;stroke-width:3.96875;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3.96875;stroke-linecap:round;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="M 69.971162,-51.636471 H 51.262295"
+       id="path3847" />
+  </g>
+  <g
+     transform="matrix(0.06360918,0,0,0.06360918,11.882644,16.418241)"
+     id="g4353">
+    <g
+       id="g4272">
+	<polygon
+   style="fill:#0095ff"
+   points="333.856,115.459 349.208,141.24 177.47,244.428 162.118,218.646 "
+   id="polygon4268" />
+
+	<polygon
+   style="fill:#0095ff"
+   points="180.326,290.233 345.81,374.803 332.274,401.58 166.791,317.011 "
+   id="polygon4270" />
+
+</g>
+    <g
+       id="g4280">
+	<path
+   style="fill:#00abe9"
+   d="m 406,0 c -49.501,0 -90,40.499 -90,90 0,49.499 40.499,90 90,90 49.501,0 90,-40.501 90,-90 C 496,40.499 455.501,0 406,0 Z"
+   id="path4274" />
+
+	<path
+   style="fill:#00abe9"
+   d="m 406,332 c -49.501,0 -90,40.499 -90,90 0,49.499 40.499,90 90,90 49.501,0 90,-40.501 90,-90 0,-49.501 -40.499,-90 -90,-90 z"
+   id="path4276" />
+
+	<path
+   style="fill:#00abe9"
+   d="m 106,181 c -49.501,0 -90,40.499 -90,90 0,49.499 40.499,90 90,90 49.501,0 90,-40.501 90,-90 0,-49.501 -40.499,-90 -90,-90 z"
+   id="path4278" />
+
+</g>
+    <g
+       id="g4288">
+	<path
+   style="fill:#0095ff"
+   d="m 496,422 c 0,49.499 -40.499,90 -90,90 V 332 c 49.501,0 90,40.499 90,90 z"
+   id="path4282" />
+
+	<path
+   style="fill:#0095ff"
+   d="M 406,180 V 0 c 49.501,0 90,40.499 90,90 0,49.499 -40.499,90 -90,90 z"
+   id="path4284" />
+
+	<path
+   style="fill:#0095ff"
+   d="m 196,271 c 0,49.499 -40.499,90 -90,90 V 181 c 49.501,0 90,40.499 90,90 z"
+   id="path4286" />
+
+</g>
+    <g
+       id="g4290">
+</g>
+    <g
+       id="g4292">
+</g>
+    <g
+       id="g4294">
+</g>
+    <g
+       id="g4296">
+</g>
+    <g
+       id="g4298">
+</g>
+    <g
+       id="g4300">
+</g>
+    <g
+       id="g4302">
+</g>
+    <g
+       id="g4304">
+</g>
+    <g
+       id="g4306">
+</g>
+    <g
+       id="g4308">
+</g>
+    <g
+       id="g4310">
+</g>
+    <g
+       id="g4312">
+</g>
+    <g
+       id="g4314">
+</g>
+    <g
+       id="g4316">
+</g>
+    <g
+       id="g4318">
+</g>
+  </g>
+  <text
+     xml:space="preserve"
+     id="text3589"
+     style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:10.5833px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';white-space:pre;shape-inside:url(#rect3591-5);fill:#000000;fill-opacity:1;stroke:none;"
+     transform="matrix(2.9994525,0,0,2.9994525,82.620923,-38.818562)"><tspan
+       x="2.6875"
+       y="27.225778"><tspan>it</tspan></tspan></text>
+</svg>
