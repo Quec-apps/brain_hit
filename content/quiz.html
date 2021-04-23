@@ -94,11 +94,11 @@ text-align: center;
 
 .bottom {
 width: 100vw; height: 10vh;
-display: flex; justify-content: center; align-items: center;
+display: flex; justify-content: space-around; align-items: center;
 transform: scale(1.2); opacity: 0;
 transition: all 350ms ease;
 }
-.hint-img {
+.hint-img, .skip-img {
 width: 9vh; height: 9vh;
 }
 
@@ -149,6 +149,7 @@ transition: none; opacity: .5;
 
 <div class="bottom">
 <img src="res/coins.png" class="hint-img active">
+<img src="res/skip.png" class="skip-img active">
 </div>
 
 <style>
@@ -318,7 +319,7 @@ setTimeout(() => {$(".middle").css({transform:'scale(1.2)', opacity:'0'});}, 300
 setTimeout(() => {$(".bottom").css({transform:'scale(1.2)', opacity:'0'});}, 400);
 }
 
-coins = localStorage.getItem("coins"); $(".coins").html(coins);
+coins = parseInt(localStorage.getItem("coins")); $(".coins").html(coins);
 quizLevel = localStorage.getItem("quizLevel"); $("#levels").html(quizLevel);
 
 function appendAll() {
@@ -380,16 +381,19 @@ $(".btn").click(function() {
 btnClick();
 });
 
-/*$(".hint-img").click(function () {
-if (coins >= 2) {
-coins --; localStorage.setItem("coins", coins); $(".coins").html(coins);
+skipAns = true;
+$(".skip-img").click(function () {
+if (coins >= 3) {
+if (skipAns) {
+skipAns = false;
+coins -= 3; localStorage.setItem("coins", coins); $(".coins").html(coins);
 quizLevel ++; localStorage.setItem("quizLevel", quizLevel);
-setTimeout(() => {$(".answer-con").css({display:'flex'});}, 200);
-} else {
-Outro();
-setTimeout(() => {parent.location="get_hints.html";}, 450);
+setTimeout(() => {$(".answer-con").css({display:'flex'});}, 200); 
 }
-});*/
+} else {
+$(".buy-coins-con").fadeIn(0);
+}
+});
 
 var answered = 0;
 showHint = true;
