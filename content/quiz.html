@@ -102,6 +102,18 @@ transition: all 350ms ease;
 width: 9vh; height: 9vh;
 }
 
+.answer-bg {
+width: 100vw; height: 7vh;
+display: flex; justify-content: center; flex-wrap: wrap;
+}
+.ans-ct {
+width: 7vw; height: 7vw; border: solid .5vw black; border-radius: 5px;
+display: flex; justify-content: center; align-items: center;
+margin: .5vw; font-size: 6vw;
+}
+.ans-space {
+width: 4vw; height: 7vw;
+}
 .active:active {
 transition: none; opacity: .5;
 }
@@ -122,6 +134,9 @@ transition: none; opacity: .5;
 
 <div class="middle">
 <div class="question"></div>
+<div class="answer-bg">
+
+</div>
 <div class="input-bg">
     <input class="input" id="input" type="text" placeholder="Enter"/>
 </div>
@@ -183,6 +198,53 @@ display: flex; justify-content: center; align-items: center;
 width: 10vw; height: 10vw;
 transform: rotate(180deg);}
 
+.buy-coins-con {
+width: 100vw; height: 100vh;
+position: fixed; top: 0; left: 0; z-index: 16;
+background-color: rgba(0, 0, 0, .3);
+display: none;
+animation: buy-coins-bg 300ms linear 1;
+} @keyframes buy-coins-bg {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+.buy-coins-top {
+width: 100vw; height: 40vh;
+}
+.buy-coins-bg {
+width: 100vw; height: 60vh; background-color: white;
+border-radius: 10px; display: flex; flex-wrap: wrap; justify-content: center; align-content: center;
+transition: all 400ms ease;
+animation: buy-coins-bg 400ms ease 1;
+} @keyframes buy-coins-bg {
+	0% {transform: translateY(5%); opacity: 0;}
+	100% {transform:  translateY(0%); opacity: 1;}
+}
+.buy-coins-ct {
+width: 80vw; height: 15vw; margin-top: 5vh;
+border: solid 1vw black; border-radius: 10px;
+display: flex; justify-content: space-between; align-items: center;
+}
+.ct-sub-bg {
+width: 32vw;
+display: flex; justify-content: space-evenly; align-items: center;
+font-size: 6vw;
+}
+.hint-img2 {
+width: 10vw; height: 10vw;
+}
+.buy {
+width: 23vw; height: 11vw;
+transform: translateX(-4.7vw);
+background-color: #e5e5e5;
+display: flex; justify-content: space-evenly; align-items: center;
+border-radius: 5px;
+}
+.video-img {
+width: 6vw; height: 6vw;
+}
+
+
 .wrong-bg {
 width: 40vw; height: 30vw; background-color: white; border: solid 1vw black;
 position: fixed; top: 40%; left: 30vw; border-radius: 10px;
@@ -205,6 +267,40 @@ width: 20vw; height: 20vw;
         </div>
     </div>
 </div>
+
+<div class="buy-coins-con">
+<div class="buy-coins-top"></div>
+		<div class="buy-coins-bg">
+			<div class="buy-coins-ct buy-coins-ct1">
+				<div class="ct-sub-bg">
+					<img src="res/coins.png" class="hint-img2"> + 2
+				</div>
+				<div class="buy free active"><img src="res/video.png" class="video-img"> Free</div>
+			</div>
+			
+			<div class="buy-coins-ct buy-coins-ct2">
+				<div class="ct-sub-bg">
+					<img src="res/coins.png" class="hint-img2"> + 10
+				</div>
+				<div class="buy buy1 active">Buy</div>
+			</div>
+			
+			<div class="buy-coins-ct buy-coins-ct3">
+				<div class="ct-sub-bg">
+					<img src="res/coins.png" class="hint-img2"> + 40
+				</div>
+				<div class="buy buy2 active">Buy</div>
+			</div>
+			
+			<div class="buy-coins-ct buy-coins-ct4">
+				<div class="ct-sub-bg">
+					<img src="res/coins.png" class="hint-img2"> + 80
+				</div>
+				<div class="buy buy3 active">Buy</div>
+			</div>
+		</div>
+</div>
+
 <div class="wrong-bg">
     <img src="res/wrong.png" class="wrong-img">
 </div>
@@ -237,6 +333,21 @@ $(".middle-img").error(function() {
 $(".middle-img").css({visibility:'hidden'});
 });
 $(".ans").html(window["ans_" + quizLevel]);
+
+
+for (let ix = 0; ix < window["ans_" + quizLevel].length; ix++) {
+if (window["ans_" + quizLevel].charAt(ix) == " ") {
+$(".answer-bg").append(`
+<div class="ans-space" id="c${ix + 1}"></div>
+`);
+} else {
+$(".answer-bg").append(`
+<div class="ans-ct" id="c${ix + 1}"></div>
+`);
+}
+    
+}
+
 }
 
 function loadCheck() {
@@ -269,14 +380,38 @@ $(".btn").click(function() {
 btnClick();
 });
 
-$(".hint-img").click(function () {
-if (coins >= 1) {
+/*$(".hint-img").click(function () {
+if (coins >= 2) {
 coins --; localStorage.setItem("coins", coins); $(".coins").html(coins);
 quizLevel ++; localStorage.setItem("quizLevel", quizLevel);
 setTimeout(() => {$(".answer-con").css({display:'flex'});}, 200);
 } else {
 Outro();
 setTimeout(() => {parent.location="get_hints.html";}, 450);
+}
+});*/
+
+var answered = 0;
+showHint = true;
+$(".hint-img").click(function () {
+if (showHint) {
+if (coins >= 1) {
+answered ++;
+$("#c" + answered).append(window["ans_" + quizLevel].charAt(answered - 1));
+if (window["ans_" + quizLevel].charAt(answered - 1) == " ") {
+answered ++;
+$("#c" + answered).append(window["ans_" + quizLevel].charAt(answered - 1));
+}
+coins --; localStorage.setItem("coins", coins); $(".coins").html(coins);
+
+if (answered == window["ans_" + quizLevel].length) {
+showHint = false;
+quizLevel ++; localStorage.setItem("quizLevel", quizLevel);
+setTimeout(() => {$(".answer-con").css({display:'flex'});}, 200);
+}
+} else {
+$(".buy-coins-con").fadeIn(0);
+}
 }
 });
 
@@ -307,6 +442,31 @@ setInterval(() => {
 coins = localStorage.getItem("coins"); $(".coins").html(coins);
 }, 1500);
 setTimeout(() => {parent.location="https://reward";}, 100);
+});
+
+$('.buy-coins-top').click(function() {
+$(".buy-coins-con").fadeOut();
+});
+
+$(".buy").click(function() {
+setInterval(() => {
+coins = localStorage.getItem("coins"); $(".coins").html(coins);
+}, 1500);
+});
+$(".free").click(function() {
+setTimeout(() => {parent.location="https://reward";}, 350);
+});
+$(".buy1").click(function() {
+setTimeout(() => {parent.location="https://item1";}, 350);
+});
+$(".buy2").click(function() {
+setTimeout(() => {parent.location="https://item2";}, 350);
+});
+$(".buy3").click(function() {
+setTimeout(() => {parent.location="https://item3";}, 350);
+});
+$(".buy4").click(function() {
+setTimeout(() => {parent.location="https://item4";}, 350);
 });
 
 inter = localStorage.getItem("inter");

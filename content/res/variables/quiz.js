@@ -7,6 +7,7 @@ window["t_" + Inc] = svg;
 window["q_" + Inc] = "What has a head and a tail, but no body?";
 window["ans_" + Inc] = "coin";
 window["img_t_" + Inc] = 0;  // image type 0 = default
+Inc ++;
 
 window["t_" + Inc] = svg;
 window["q_" + Inc] = "Take off my skin - I won’t cry, but you will! What am I?";
@@ -219,5 +220,5 @@ window["img_t_" + Inc] = 0;
 Inc ++;
 
 
-q_total = 35;
+q_total = 36;
 isLoaded = true;
