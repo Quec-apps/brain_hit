@@ -223,7 +223,7 @@ setTimeout(() => {$(".middle").css({transform:'scale(1.2)', opacity:'0'});}, 300
 setTimeout(() => {$(".bottom").css({transform:'scale(1.2)', opacity:'0'});}, 400);
 }
 
-coins = localStorage.getItem("coins"); $(".coins").html(coins);
+coins = parseInt(localStorage.getItem("coins")); $(".coins").html(coins);
 guessLevel = localStorage.getItem("guessLevel"); $("#levels").html(guessLevel);
 
 function appendAll() {
@@ -267,8 +267,8 @@ btnClick();
 });
 
 $(".hint-img").click(function () {
-if (coins >= 1) {
-coins --; localStorage.setItem("coins", coins); $(".coins").html(coins);
+if (coins >= 3) {
+coins -= 3; localStorage.setItem("coins", coins); $(".coins").html(coins);
 guessLevel ++; localStorage.setItem("guessLevel", guessLevel);
 setTimeout(() => {$(".answer-con").css({display:'flex'});}, 200);
 } else {
