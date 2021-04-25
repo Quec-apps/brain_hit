@@ -8,6 +8,14 @@
 <body>
 <script>
 localStorage.setItem("inter", 0);
+
+if (localStorage.getItem("opened") == null) {
+    localStorage.setItem("opened", 1);
+} else {
+opened = parseInt(localStorage.getItem("opened"));
+opened ++; localStorage.setItem("opened", opened);
+}
+
 setTimeout(() => {
 location.replace("menu.html");
 }, 1000);
