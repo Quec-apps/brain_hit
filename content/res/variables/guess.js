@@ -12,6 +12,9 @@ var drink = "Guess the Drink";
 var computer = "Guess the Computer Brand";
 var city = "Guess the City";
 var car = "Guess the Car Brand";
+var fashion = "Gues the Fashion Brand";
+var food = "Guess the Food";
+var brand = "Guess the Brand";
 
 window["t_" + Inc] = svg;
 window["q_" + Inc] = app;
@@ -349,6 +352,241 @@ window["ans_" + Inc] = "acer";
 window["des_" + Inc] = "Ace + R";
 Inc ++;
 
+window["t_" + Inc] = svg;
+window["q_" + Inc] = app;
+window["ans_" + Inc] = "facebook";
+window["des_" + Inc] = "Face + Book";
+Inc ++;
 
-g_total = 56;
+window["t_" + Inc] = svg;
+window["q_" + Inc] = fashion;
+window["ans_" + Inc] = "nike";
+window["des_" + Inc] = "N + Eye + Key";
+Inc ++;
+
+window["t_" + Inc] = svg;
+window["q_" + Inc] = food;
+window["ans_" + Inc] = "sandwich";
+window["des_" + Inc] = "Sand + Witch";
+Inc ++;
+
+window["t_" + Inc] = svg;
+window["q_" + Inc] = job;
+window["ans_" + Inc] = "engineer";
+window["des_" + Inc] = "Engine + Ear";
+Inc ++;
+
+window["t_" + Inc] = svg;
+window["q_" + Inc] = job;
+window["ans_" + Inc] = "cashier";
+window["des_" + Inc] = "Cash + Air";
+Inc ++;
+
+window["t_" + Inc] = svg;
+window["q_" + Inc] = app;
+window["ans_" + Inc] = "snapchat";
+window["des_" + Inc] = "Snap + Chat";
+Inc ++;
+
+window["t_" + Inc] = svg;
+window["q_" + Inc] = job;
+window["ans_" + Inc] = "designer";
+window["des_" + Inc] = "D + Sign + R";
+Inc ++;
+
+window["t_" + Inc] = svg;
+window["q_" + Inc] = job;
+window["ans_" + Inc] = "carpenter";
+window["des_" + Inc] = "Car + Pen + Tear";
+Inc ++;
+
+window["t_" + Inc] = svg;
+window["q_" + Inc] = app;
+window["ans_" + Inc] = "uber";
+window["des_" + Inc] = "U + Bear";
+Inc ++;
+
+window["t_" + Inc] = svg;
+window["q_" + Inc] = fashion;
+window["ans_" + Inc] = "adidas";
+window["des_" + Inc] = "AD + Dice";
+Inc ++;
+
+window["t_" + Inc] = svg;
+window["q_" + Inc] = food;
+window["ans_" + Inc] = "cherry";
+window["des_" + Inc] = "Chair + Y";
+Inc ++;
+
+window["t_" + Inc] = svg;
+window["q_" + Inc] = app;
+window["ans_" + Inc] = "soundcloud";
+window["des_" + Inc] = "Sound + Cloud";
+Inc ++;
+
+window["t_" + Inc] = svg;
+window["q_" + Inc] = food;
+window["ans_" + Inc] = "pineapple";
+window["des_" + Inc] = "Pen + Apple";
+Inc ++;
+
+window["t_" + Inc] = svg;
+window["q_" + Inc] = job;
+window["ans_" + Inc] = "teacher";
+window["des_" + Inc] = "Tea + Chair";
+Inc ++;
+
+window["t_" + Inc] = svg;
+window["q_" + Inc] = brand;
+window["ans_" + Inc] = "pringles";
+window["des_" + Inc] = "P + Ring + Goal + S";
+Inc ++;
+
+window["t_" + Inc] = svg;
+window["q_" + Inc] = fashion;
+window["ans_" + Inc] = "rolex";
+window["des_" + Inc] = "Roll + X";
+Inc ++;
+
+window["t_" + Inc] = svg;
+window["q_" + Inc] = brand;
+window["ans_" + Inc] = "canon";
+window["des_" + Inc] = "Can + On";
+Inc ++;
+
+window["t_" + Inc] = svg;
+window["q_" + Inc] = fashion;
+window["ans_" + Inc] = "kappa";
+window["des_" + Inc] = "Cup + A";
+Inc ++;
+
+window["t_" + Inc] = svg;
+window["q_" + Inc] = food;
+window["ans_" + Inc] = "cabbage";
+window["des_" + Inc] = "Cup + Page";
+Inc ++;
+
+window["t_" + Inc] = svg;
+window["q_" + Inc] = game;
+window["ans_" + Inc] = "subway surfers";
+window["des_" + Inc] = "Subway + Surfing";
+Inc ++;
+
+window["t_" + Inc] = svg;
+window["q_" + Inc] = job;
+window["ans_" + Inc] = "sculptor";
+window["des_" + Inc] = "Skull + P + Tear";
+Inc ++;
+
+window["t_" + Inc] = svg;
+window["q_" + Inc] = food;
+window["ans_" + Inc] = "hot pepper";
+window["des_" + Inc] = "Hot + Paper";
+Inc ++;
+
+window["t_" + Inc] = svg;
+window["q_" + Inc] = job;
+window["ans_" + Inc] = "baker";
+window["des_" + Inc] = "Bee + Car";
+Inc ++;
+
+window["t_" + Inc] = svg;
+window["q_" + Inc] = brand;
+window["ans_" + Inc] = "disney";
+window["des_" + Inc] = "Dice + NE";
+Inc ++;
+
+window["t_" + Inc] = svg;
+window["q_" + Inc] = fashion;
+window["ans_" + Inc] = "armani";
+window["des_" + Inc] = "AR + Man + I";
+Inc ++;
+
+window["t_" + Inc] = svg;
+window["q_" + Inc] = job;
+window["ans_" + Inc] = "butcher";
+window["des_" + Inc] = "Boat + Chair";
+Inc ++;
+
+window["t_" + Inc] = svg;
+window["q_" + Inc] = game;
+window["ans_" + Inc] = "8 ball pool";
+window["des_" + Inc] = "8 + Ball + Pool";
+Inc ++;
+
+window["t_" + Inc] = svg;
+window["q_" + Inc] = app;
+window["ans_" + Inc] = "google map";
+window["des_" + Inc] = "Goggles + Map";
+Inc ++;
+
+window["t_" + Inc] = svg;
+window["q_" + Inc] = brand;
+window["ans_" + Inc] = "ikea";
+window["des_" + Inc] = "Eye + Key + A";
+Inc ++;
+
+window["t_" + Inc] = svg;
+window["q_" + Inc] = brand;
+window["ans_" + Inc] = "xbox";
+window["des_" + Inc] = "X + Box";
+Inc ++;
+
+window["t_" + Inc] = svg;
+window["q_" + Inc] = fashion;
+window["ans_" + Inc] = "reebok";
+window["des_" + Inc] = "RE + Book";
+Inc ++;
+
+window["t_" + Inc] = svg;
+window["q_" + Inc] = job;
+window["ans_" + Inc] = "pilot";
+window["des_" + Inc] = "Pie + Loot";
+Inc ++;
+
+window["t_" + Inc] = svg;
+window["q_" + Inc] = fashion;
+window["ans_" + Inc] = "vans";
+window["des_" + Inc] = "Van + S";
+Inc ++;
+
+window["t_" + Inc] = svg;
+window["q_" + Inc] = app;
+window["ans_" + Inc] = "gmail";
+window["des_" + Inc] = "G + Mail";
+Inc ++;
+
+window["t_" + Inc] = svg;
+window["q_" + Inc] = job;
+window["ans_" + Inc] = "welder";
+window["des_" + Inc] = "Well + Deer";
+Inc ++;
+
+window["t_" + Inc] = svg;
+window["q_" + Inc] = app;
+window["ans_" + Inc] = "youtube";
+window["des_" + Inc] = "U + Tube";
+Inc ++;
+
+window["t_" + Inc] = svg;
+window["q_" + Inc] = job;
+window["ans_" + Inc] = "doctor";
+window["des_" + Inc] = "Duck + Tear";
+Inc ++;
+
+window["t_" + Inc] = svg;
+window["q_" + Inc] = fashion;
+window["ans_" + Inc] = "chanel";
+window["des_" + Inc] = "Chain + EL";
+Inc ++;
+
+window["t_" + Inc] = svg;
+window["q_" + Inc] = job;
+window["ans_" + Inc] = "scientist";
+window["des_" + Inc] = "Sea + Eye + List";
+Inc ++;
+
+
+
+g_total = 95;
 isLoaded = true;
