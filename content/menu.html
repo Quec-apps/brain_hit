@@ -263,7 +263,7 @@ showToast();
 
 $(".coins-bg").click(function() {
 Outro();
-setTimeout(() => {parent.location="get_hints.html";}, 450);
+setTimeout(() => {parent.location="get_hints.html";}, 750);
 });
 
 opened = localStorage.getItem("opened");
@@ -300,6 +300,7 @@ if (dontAsk) {
     localStorage.setItem("rate_finished", 1);
 }
 });
+opened ++; localStorage.setItem("opened", opened);
 $(".okay").click(function() {
     localStorage.setItem("rate_finished", 1);
     setTimeout(() => { parent.location="https://play.google.com/store/apps/details?id=com.quec.brain.hit"; }, 300);
