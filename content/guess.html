@@ -65,6 +65,7 @@ width: 100%; margin: 3vw;
 
 .middle-img {
 width: 70vw; height: 35vw;
+visibility: hidden;
 }
 .input-bg {
 width: 100%; display: flex; justify-content: center; align-items: center;
@@ -234,6 +235,10 @@ $(".middle-img").css({visibility:'hidden'});
 });
 $(".ans").html(window["ans_" + guessLevel]);
 $(".des").html(window["des_" + guessLevel]);
+
+setTimeout(() => {
+$(".middle-img").css({visibility:'visible'});
+}, 1000);
 }
 
 function loadCheck() {
