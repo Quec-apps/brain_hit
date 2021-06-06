@@ -15,6 +15,10 @@ var car = "Guess the Car Brand";
 var fashion = "Gues the Fashion Brand";
 var food = "Guess the Food";
 var brand = "Guess the Brand";
+var cartoon = "Guess the Cartoon Character";
+var fruit = "Guess the Fruit";
+var hero = "Guess the Super Hero";
+var flavour = "Guess the flavour";
 
 window["t_" + Inc] = svg;
 window["q_" + Inc] = app;
@@ -586,7 +590,119 @@ window["ans_" + Inc] = "scientist";
 window["des_" + Inc] = "Sea + Eye + List";
 Inc ++;
 
+window["t_" + Inc] = svg;
+window["q_" + Inc] = hero;
+window["ans_" + Inc] = "ant man";
+window["des_" + Inc] = "Ant + Man";
+Inc ++;
 
+window["t_" + Inc] = svg;
+window["q_" + Inc] = cartoon;
+window["ans_" + Inc] = "looney tunes";
+window["des_" + Inc] = "Lo + Knee + Tunes";
+Inc ++;
 
-g_total = 95;
+window["t_" + Inc] = svg;
+window["q_" + Inc] = flavour;
+window["ans_" + Inc] = "butterscotch";
+window["des_" + Inc] = "Butter + S + Coach";
+Inc ++;
+
+window["t_" + Inc] = svg;
+window["q_" + Inc] = cartoon;
+window["ans_" + Inc] = "mickey mouse";
+window["des_" + Inc] = "Mi + Key + Mouse";
+Inc ++;
+
+window["t_" + Inc] = svg;
+window["q_" + Inc] = flavour;
+window["ans_" + Inc] = "blueberry";
+window["des_" + Inc] = "Blue + Bear + E";
+Inc ++;
+
+window["t_" + Inc] = svg;
+window["q_" + Inc] = hero;
+window["ans_" + Inc] = "captain america";
+window["des_" + Inc] = "Captain + America";
+Inc ++;
+
+window["t_" + Inc] = svg;
+window["q_" + Inc] = cartoon;
+window["ans_" + Inc] = "pokemon";
+window["des_" + Inc] = "Po + Key + Man";
+Inc ++;
+
+window["t_" + Inc] = svg;
+window["q_" + Inc] = hero;
+window["ans_" + Inc] = "dead pool";
+window["des_" + Inc] = "Dead + Pool";
+Inc ++;
+
+window["t_" + Inc] = svg;
+window["q_" + Inc] = flavour;
+window["ans_" + Inc] = "strawberry";
+window["des_" + Inc] = "Straw + Bear + E";
+Inc ++;
+
+window["t_" + Inc] = svg;
+window["q_" + Inc] = hero;
+window["ans_" + Inc] = "iron man";
+window["des_" + Inc] = "Iron + Man";
+Inc ++;
+
+window["t_" + Inc] = svg;
+window["q_" + Inc] = cartoon;
+window["ans_" + Inc] = "dora";
+window["des_" + Inc] = "Door + A";
+Inc ++;
+
+window["t_" + Inc] = svg;
+window["q_" + Inc] = flavour;
+window["ans_" + Inc] = "vanilla";
+window["des_" + Inc] = "Van + Ill + A";
+Inc ++;
+
+window["t_" + Inc] = svg;
+window["q_" + Inc] = hero;
+window["ans_" + Inc] = "black panther";
+window["des_" + Inc] = "Black + Panther";
+Inc ++;
+
+window["t_" + Inc] = svg;
+window["q_" + Inc] = cartoon;
+window["ans_" + Inc] = "simpsons";
+window["des_" + Inc] = "Sim + P + Sun";
+Inc ++;
+
+window["t_" + Inc] = svg;
+window["q_" + Inc] = hero;
+window["ans_" + Inc] = "ghost rider";
+window["des_" + Inc] = "Ghost + Rider";
+Inc ++;
+
+window["t_" + Inc] = svg;
+window["q_" + Inc] = fruit;
+window["ans_" + Inc] = "grape";
+window["des_" + Inc] = "Grey + Ape";
+Inc ++;
+
+window["t_" + Inc] = svg;
+window["q_" + Inc] = cartoon;
+window["ans_" + Inc] = "spongebob";
+window["des_" + Inc] = "Sponge + Bow + B";
+Inc ++;
+
+window["t_" + Inc] = svg;
+window["q_" + Inc] = hero;
+window["ans_" + Inc] = "spider man";
+window["des_" + Inc] = "Spider Man";
+Inc ++;
+
+window["t_" + Inc] = svg;
+window["q_" + Inc] = flavour;
+window["ans_" + Inc] = "peppermint";
+window["des_" + Inc] = "Pepper + Mint";
+Inc ++;
+
+g_total = 114;
 isLoaded = true;
